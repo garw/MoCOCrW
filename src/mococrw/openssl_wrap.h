@@ -1374,5 +1374,6 @@ SSL_EC_KEY_Ptr _EC_KEY_oct2key(int nid, const std::vector<uint8_t> &buf);
 void _EVP_PKEY_set1_EC_KEY(EVP_PKEY *pkey, EC_KEY *key);
 
 std::vector<uint8_t> _EC_KEY_key2buf(const EVP_PKEY* evp, point_conversion_form_t form);
+std::vector<uint8_t> _EVP_derive_key(const EVP_PKEY *peerkey, const EVP_PKEY *key);
 }  //::openssl
 }  //::mococrw
