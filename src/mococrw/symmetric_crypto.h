@@ -311,6 +311,13 @@ public:
     AESCipherBuilder &setIV(const std::vector<uint8_t> &iv);
 
     /**
+     * @brief Get the default length of the IV in bytes given the cipher mode.
+     * @param mode The mode
+     * @return The length of the IV in bytes.
+     */
+    static size_t getDefaultIVLength(SymmetricCipherMode mode);
+
+    /**
      * Set length of authentication tag for authenticated encryption.
      *
      * Use this method to change default length of authentication tag which the encryptor will
